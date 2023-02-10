@@ -1,15 +1,25 @@
-require 'rspec'
-
-describe 'addition' do
-  it 'adds two numbers' do
-    calculator = Calculator.new
-    result = calculator.add(3, 4)
-    expect(result).to eq(7)
+class Solver
+  def factorial(num)
+    if num.is_a? Integer and num >= 0
+      (1..num).reduce(1, :*)
+    else
+      'Error'
+    end
   end
-end
 
-class Calculator
-  def add(num1, num2)
-    num1 + num2
+  def fizzbuzz(num)
+    if (num % 3).zero? and (num % 5).zero?
+      'fizzbuzz'
+    elsif (num % 3).zero?
+      'fizz'
+    elsif (num % 5).zero?
+      'buzz'
+    else
+      num
+    end
+  end
+
+  def reverse(string)
+    string.reverse
   end
 end
