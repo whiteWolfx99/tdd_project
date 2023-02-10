@@ -13,9 +13,3 @@ describe 'addition' do
     expect(result).to eq(-7)
   end
 end
-
-class Calculator
-  def add(num1, num2)
-    num1 + num2
-  end
-end
