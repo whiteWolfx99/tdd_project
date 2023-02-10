@@ -1,21 +1,21 @@
 class Solver
-  def factorial(n)
-    if n.is_a? Integer and n >= 0
-      (1..n).reduce(1, :*)
+  def factorial(num)
+    if num.is_a? Integer and num >= 0
+      (1..num).reduce(1, :*)
     else
       'Error'
     end
   end
 
-  def fizzbuzz(n)
-    if n % 3 == 0 and n % 5 == 0
+  def fizzbuzz(num)
+    if (num % 3).zero? and (num % 5).zero?
       'fizzbuzz'
-    elsif n % 3 == 0
+    elsif (num % 3).zero?
       'fizz'
-    elsif n % 5 == 0
+    elsif (num % 5).zero?
       'buzz'
     else
-      n
+      num
     end
   end
 
